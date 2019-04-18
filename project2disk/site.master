@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="site.master.cs" Inherits="site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Disk Inventory CC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="~/css/styles.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+
+<body>
+
+    <header class="jumbotron">
+        <img src="Images/logo.png" alt="Copyright Free Logo" />
+    </header>
+    
+    <main>
+        <div class="nav">
+          <a href="Default.aspx">Home</a>
+          <a href="Borrower.aspx">Borrower</a>
+          <a href="Disks.aspx">Disks</a>
+          <a href="Artists.aspx">Artists</a>
+        </div>
+        <form id="form2" runat="server" class="form-horizontal">
+            <asp:ContentPlaceHolder id="mainPlaceholder" runat="server">
+                 <!-- location of whatever is in the mainPlaceholder of other pages pointing to master page -->
+            </asp:ContentPlaceHolder>
+        </form>
+    </main>
+
+</body>
+
+</html>
