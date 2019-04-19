@@ -14,6 +14,5 @@ public partial class Borrower : System.Web.UI.Page
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-        lblMessage.Text = "Thank you for entering your information!";
     }
 }
