@@ -166,6 +166,9 @@
         </SelectedItemTemplate>
     </asp:ListView>
 
+    <br />
+
+
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:disk_inventoryccConnectionString %>" 
         DeleteCommand="EXECUTE del_borrower @borrower_id" 
         InsertCommand="EXECUTE ins_borrower  @fname, @lname, @phone_num" 
@@ -188,42 +191,5 @@
     </asp:SqlDataSource>
     <br />
     <br />
-  
-       <!-- <div class="form-group">
-
-            <label class="col-sm-3 control-label">First Name</label>
-
-            <div class="col-sm-4">
-                <asp:TextBox ID="tbFName" runat="server" CssClass="form-control"></asp:TextBox> 
-            </div>
-
-
-
-            <label class="col-sm-3 control-label">Last Name</label>
-
-            <div class="col-sm-4">
-                <asp:TextBox ID="tbLName" runat="server" CssClass="form-control"></asp:TextBox> 
-            </div>
-
-            
-
-
-            <label class="col-sm-3 control-label">Phone Number</label>
-
-            <div class="col-sm-4">
-                <asp:TextBox ID="tbPhone" runat="server" CssClass="form-control"></asp:TextBox> 
-            </div>
-
-            
-
-            <asp:Button ID="Button1" class="submitButton" runat="server" Text="Submit" OnClick="Button1_Click" />
-        </div>
-        
-    <%-- message label --%>
-        <div class="form-group">
-            <div class="col-sm-offset-1 col-sm-11">
-                <asp:Label ID="lblMessage" runat="server" CssClass="text-info"></asp:Label>
-            </div>
-        </div> -->
 
 </asp:Content>

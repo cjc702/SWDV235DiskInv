@@ -25,6 +25,7 @@
           <a href="Borrower.aspx">Borrower</a>
           <a href="Disks.aspx">Disks</a>
           <a href="Artists.aspx">Artists</a>
+          <a href="Checkout.aspx">Checkout</a>
         </div>
         <form id="form2" runat="server" class="form-horizontal">
             <asp:ContentPlaceHolder id="mainPlaceholder" runat="server">
