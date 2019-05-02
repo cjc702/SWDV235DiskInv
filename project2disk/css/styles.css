@@ -9,6 +9,21 @@
     background-attachment: fixed;
 }
 
+/* center listviews - does not work */
+.containercenter{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+/* center calendar - does not work */
+#Calendar1 {
+    margin-left: auto;
+    margin-right: auto;
+    width:50%;
+}
+
 /* logo padding */
 .jumbotron{
     padding-bottom: 50px;
@@ -83,4 +98,14 @@
     margin-left: auto;
     margin-right: auto;
     padding-top: 20px;
+}
+
+/* adding text-danger class for warnings */
+.RequiredFieldValidator{
+    color: red;
+}
+
+/*center listviews*/
+.ListView{
+
 }

@@ -1,6 +1,16 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Artists.aspx.cs" Inherits="Artists" MasterPageFile="~/site.master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="mainPlaceholder" runat="server" >
+
+    <div class="containercenter">
+
+        <!-- attempt to center the listview -->
+        <table width="100%">
+           <tr>
+             <td align="center">
+               <table>
+                 <tr>
+                    <td>
     
     <asp:ListView ID="ListView1" class="listview" runat="server" DataKeyNames="artist_id" DataSourceID="SqlDataSource1" InsertItemPosition="LastItem">
         <AlternatingItemTemplate>
@@ -98,10 +108,10 @@
                         <table id="itemPlaceholderContainer" runat="server" border="1" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;font-family: Verdana, Arial, Helvetica, sans-serif;">
                             <tr runat="server" style="background-color:#DCDCDC;color: #000000;">
                                 <th runat="server"></th>
-                                <th runat="server">artist_id</th>
-                                <th runat="server">fname</th>
-                                <th runat="server">lname</th>
-                                <th runat="server">artist_type_id</th>
+                                <th runat="server">Artist ID</th>
+                                <th runat="server">First Name</th>
+                                <th runat="server">Last Name</th>
+                                <th runat="server">Artist Type ID</th>
                             </tr>
                             <tr id="itemPlaceholder" runat="server">
                             </tr>
@@ -140,6 +150,15 @@
             </tr>
         </SelectedItemTemplate>
     </asp:ListView>
+
+                                   </td>
+                     </tr>
+               </table>
+             </td>
+           </tr>
+        </table>
+
+    </div>
 
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:disk_inventoryccConnectionString %>" 
         DeleteCommand="EXECUTE del_artist @artist_id" 

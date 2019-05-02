@@ -2,6 +2,16 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="mainPlaceholder" runat="server" >
 
+    <div class="containercenter">
+
+        <!-- attempt to center the listview -->
+        <table width="100%">
+           <tr>
+             <td align="center">
+               <table>
+                 <tr>
+                    <td>
+
     <asp:ListView ID="ListView1" class="listview" runat="server" DataKeyNames="disk_id" DataSourceID="SqlDataSource1" InsertItemPosition="LastItem">
         <AlternatingItemTemplate>
             <tr style="background-color:#FFF8DC;">
@@ -40,7 +50,7 @@
                 </td>
                 <td>
                     <asp:TextBox ID="disk_nameTextBox" runat="server" Text='<%# Bind("disk_name") %>' />
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="disk_nameTextBox" ErrorMessage="Enter a name." ValidationGroup="Edit"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="disk_nameTextBox" ErrorMessage="Enter a name." ValidationGroup="Edit" BootstrapClass="text-danger"></asp:RequiredFieldValidator>
                 </td>
                 <td>
                     <asp:TextBox ID="release_dateTextBox" runat="server" Text='<%# Bind("release_date") %>' />
@@ -126,12 +136,12 @@
                         <table id="itemPlaceholderContainer" runat="server" border="1" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;font-family: Verdana, Arial, Helvetica, sans-serif;">
                             <tr runat="server" style="background-color:#DCDCDC;color: #000000;">
                                 <th runat="server"></th>
-                                <th runat="server">disk_id</th>
-                                <th runat="server">disk_name</th>
-                                <th runat="server">release_date</th>
-                                <th runat="server">genre_id</th>
-                                <th runat="server">status_id</th>
-                                <th runat="server">disk_type_id</th>
+                                <th runat="server">Disk ID</th>
+                                <th runat="server">Disk Name</th>
+                                <th runat="server">Release Date</th>
+                                <th runat="server">Genre ID</th>
+                                <th runat="server">Status ID</th>
+                                <th runat="server">Disk Type ID</th>
                             </tr>
                             <tr id="itemPlaceholder" runat="server">
                             </tr>
@@ -176,6 +186,15 @@
             </tr>
         </SelectedItemTemplate>
     </asp:ListView>
+
+                                   </td>
+                     </tr>
+               </table>
+             </td>
+           </tr>
+        </table>
+
+    </div>
 
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:disk_inventoryccConnectionString %>" 
         DeleteCommand="EXECUTE del_disk @disk_id" 
